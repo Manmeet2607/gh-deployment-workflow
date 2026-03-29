@@ -10,6 +10,10 @@ on:
 jobs:
   deploy:
     runs-on: ubuntu-latest
+    permissions:
+      pages: write      # Needed for GitHub Pages deployment
+      id-token: write   # Needed for OIDC authentication
+
 
     steps:
       - name: Checkout repository
